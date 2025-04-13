@@ -5,7 +5,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
-  const [fontSize, setFontSize] = React.useState(16);
+  const [fontSize, setFontSize] = React.useState(18);
   const defaultFontSize = 16;
 
   React.useEffect(() => {
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         theme === "dark" ? "bg-black" : "bg-[#113946]"
       }`}
     >
-      <nav className={`p-4 flex items-center justify-end `}>
+      <nav className={`p-3 flex items-center justify-end `}>
         <a
           href="#about-me"
           className={`py-1 px-1 mx-2 ${
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
             onChange={toggleTheme}
           />
 
-          <span className="peer-checked:[&>[data-a=dark]]:block peer-checked:[&>[data-a=light]]:hidden absolute inset-y-0 start-0 m-0.5 h-6 w-6 grid place-content-center rounded-full bg-black text-white transition-[inset-inline-start] peer-checked:start-5">
+          <span className="text-sm peer-checked:[&>[data-a=dark]]:block peer-checked:[&>[data-a=light]]:hidden absolute inset-y-0 start-0 m-0.5 h-6 w-6 grid place-content-center rounded-full bg-black text-white transition-[inset-inline-start] peer-checked:start-5">
             <MdOutlineDarkMode data-a="dark" className="ml-0.5 size-5 hidden" />
             <MdOutlineLightMode data-a="light" className="size-4 block" />
           </span>

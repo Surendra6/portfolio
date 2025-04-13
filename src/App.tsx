@@ -2,26 +2,32 @@ import data from "./data.json";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Skills from "./components/Skills/Skills";
-// import WorkExperience from "./components/WorkExperience/WorkExperience";
-import Awards from "./components/Awards/Awards";
 import Projects from "./components/Projects/Projects";
 import { useTheme } from "./ThemeContext";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
+import Banner from "./components/Banner/Banner";
 
 function App() {
   const { theme } = useTheme();
   return (
     <div
-      className={`mx-auto flex flex-col ${
+      className={`font-winky-rough mx-auto flex flex-col ${
         theme === "dark" ? "bg-black text-white" : "bg-[#fff2d8] text-[#113946]"
       }`}
     >
       <Header />
-      <AboutMe profile={data.profile} />
+      <Banner profile={data.profile} />
       <div
         className={`h-0.5 mx-24
         ${theme === "dark" ? "bg-[#fff2d8]" : "bg-transparent"}
+      `}
+      ></div>
+      <AboutMe />
+
+      <div
+        className={`h-0.5 mx-24
+        ${theme === "dark" ? "bg-[#fff2d8]" : "bg-[#113946]"}
       `}
       ></div>
       <Skills />

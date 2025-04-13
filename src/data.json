@@ -82,7 +82,7 @@
       "name": "Derivco Slot Games",
       "description": "Developed engaging, high-performance slot games for Derivco, a leading global provider of premium online gaming software, using JavaScript, HTML5 Canvas, sprite images, and CSS. Proactively incorporated modern ES6 concepts to enhance code efficiency and maintainability. Collaborated effectively with cross-functional design and requirements teams throughout the development lifecycle. Provided crucial production support for deployed games, ensuring stability and optimal player experience for Derivco's partners.",
       "technologies": ["JavaScript", "HTML5", "CSS3"],
-      "images": "/derivco-game.jpg",
+      "images": "/derivco-game.png",
       "github": "",
       "live": ""
     }

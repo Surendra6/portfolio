@@ -31,29 +31,29 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const techIcon = useCallback((tech: string) => {
     switch (true) {
       case tech === "reactjs":
-        return <FaReact className="w-5 h-5" />;
+        return <FaReact className="size-4" />;
       case tech === "javascript":
-        return <RiJavascriptLine className="w-5 h-5" />;
+        return <RiJavascriptLine className="size-4" />;
       case tech === "typescript":
-        return <TbBrandTypescript className="w-5 h-5" />;
+        return <TbBrandTypescript className="size-4" />;
       case tech === "html5":
-        return <FaHtml5 className="w-5 h-5" />;
+        return <FaHtml5 className="size-4" />;
       case tech === "css3":
-        return <IoLogoCss3 className="w-5 h-5" />;
+        return <IoLogoCss3 className="size-4" />;
       case tech === "tailwind css":
-        return <RiTailwindCssFill className="w-5 h-5" />;
+        return <RiTailwindCssFill className="size-4" />;
       case tech === "vite":
-        return <SiVite className="w-5 h-5" />;
+        return <SiVite className="size-4" />;
       case tech === "material ui":
-        return <SiMui className="w-5 h-5" />;
+        return <SiMui className="size-4" />;
       case tech === "jest":
-        return <SiJest className="w-5 h-5" />;
+        return <SiJest className="size-4" />;
       case tech === "cypress":
-        return <TbBrandCypress className="w-5 h-5" />;
+        return <TbBrandCypress className="size-4" />;
       case tech === "github":
-        return <FaGithub className="w-5 h-5" />;
+        return <FaGithub className="size-4" />;
       case tech === "vue.js":
-        return <FaVuejs className="w-5 h-5" />;
+        return <FaVuejs className="size-4" />;
     }
   }, []);
 
@@ -68,7 +68,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 
       <div className="mt-16">
         {projects.map((project, index) => (
-          <div key={index} className="flex items-center mt-12 gap-20">
+          <div key={index} className="flex items-center mt-14 gap-20">
             <div className="text-left">
               <h3 className="text-2xl font-bold">{project.name}</h3>
               <p className="mt-5 text-lg">{project.description}</p>
@@ -79,7 +79,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       theme === "dark"
                         ? "bg-transparent border-[#fff2d8]"
                         : "bg-gray-600 border-transparent"
-                    } px-2 py-1 rounded-lg text-sm font-semibold flex flex-row gap-1`}
+                    } px-2 py-1 rounded-lg text-xs font-semibold flex flex-row gap-1`}
                   >
                     {techIcon(tech.toLowerCase())}
                     {tech}
@@ -97,7 +97,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                         : "bg-[#113946] text-[#fff2d8] hover:text-[#fff2d8] "
                     }`}
                   >
-                    <span>GitHub</span> <FiExternalLink className="w-5 h-5" />
+                    <span>GitHub</span> <FiExternalLink className="size-5" />
                   </a>
                 )}
                 {project.live && (
@@ -110,7 +110,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                         : "bg-[#113946] text-[#fff2d8] hover:text-[#fff2d8] "
                     }`}
                   >
-                    <span>Live</span> <FiExternalLink className="w-5 h-5" />
+                    <span>Live</span> <FiExternalLink className="size-5" />
                   </a>
                 )}
               </div>

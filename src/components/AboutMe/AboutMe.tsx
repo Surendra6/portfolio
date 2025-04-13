@@ -1,29 +1,19 @@
 import { useTheme } from "../../ThemeContext";
-import { FiDownload } from "react-icons/fi";
+import DownloadCVQR from "../DownloadCVQR/DownloadCVQR";
 
-interface AboutMeProps {
-  profile: {
-    image: string;
-    name: string;
-    title: string;
-  };
-}
-
-const AboutMe: React.FC<AboutMeProps> = ({ profile }) => {
+const AboutMe: React.FC = () => {
   const { theme } = useTheme();
   return (
     <section
       id="about-me"
-      className={`flex text-left pt-36 pb-12 px-24 gap-12 text-[#fff2d8] ${
-        theme === "dark" ? "bg-black" : "bg-[#113946]"
-      }`}
+      className={`py-16 px-24
+      ${theme === "dark" ? "text-[#fff2d8]" : "text-[#113946]"}
+    `}
     >
-      <div>
-        <h1>
-          Hello, I'm <br />
-          Surendra Gullipalli
-        </h1>
-        <p className="mt-12 text-lg">
+      <h2 className="text-3xl font-semibold">About Me</h2>
+
+      <div className="flex gap-12 mt-12">
+        <p className="text-2xl text-left size-2/3">
           A seasoned{" "}
           <span className="inline-block text-4xl font-semibold">
             Front-End Developer
@@ -36,20 +26,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ profile }) => {
           design. I enjoy collaborating with cross-functional teams to bring
           innovative ideas to life.
         </p>
-
-        <a
-          href="/cv.pdf"
-          download
-          className="py-2 px-4 mt-8 inline-flex gap-3 text-center bg-[#fff2d8] text-[#113946] hover:text-[#113946] drop-shadow-md hover:drop-shadow-xl font-semibold rounded"
-        >
-          <FiDownload className="w-5 h-5" /> <span>Download CV</span>
-        </a>
+        <DownloadCVQR />
       </div>
-      <img
-        src={profile.image}
-        alt={profile.name}
-        className="w-72 h-72 rounded-full flex-none mx-auto"
-      />
     </section>
   );
 };
