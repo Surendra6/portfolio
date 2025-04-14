@@ -23,6 +23,10 @@ const Banner: React.FC<BannerProps> = ({ profile }) => {
           Surendra Gullipalli
         </h1>
 
+        <h2 className="text-3xl mt-5">
+          <span className="">{`<`}</span>Front-End Developer <span>{`/>`}</span>
+        </h2>
+
         <h1 className="flex w-full mt-24 font-satisfy text-7xl">
           Welcome to my Portfolio
         </h1>

@@ -7,6 +7,7 @@ import { useTheme } from "./ThemeContext";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Banner from "./components/Banner/Banner";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 
 function App() {
   const { theme } = useTheme();
@@ -43,12 +44,8 @@ function App() {
       `}
       ></div>
       <Contact />
+      <BackToTopButton />
 
-      {/* <WorkExperience workExperience={data.workExperience} />
-      <div className="h-0.5 bg-black mx-24"></div> */}
-
-      {/* <Awards awards={data.awards} />
-      <div className="h-0.5 bg-black mx-24"></div> */}
       {/* {
   "name": "Portfolio Website",
   "description": "Built a dynamic personal portfolio website using ReactJS and TypeScript to effectively showcase my front-end development experience and design capabilities. The site features interactive sections for projects, skills, and contact information, emphasizing a clean and modern aesthetic. Implemented a user-controlled theme switching feature (light/dark mode) for improved accessibility and visual preference. Leveraged Tailwind CSS for rapid, responsive UI development, ensuring a seamless experience across all devices.",

@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     `}
     >
       <h2 className="text-3xl font-semibold">Contact Me</h2>
-      <div className="flex justify-center items-center w-full gap-10 my-12">
+      <div className="flex justify-center items-center w-full gap-10 my-10">
         <a
           href="https://github.com/Surendra6"
           target="_blank"
@@ -57,9 +57,10 @@ const Contact: React.FC = () => {
           )}
         </span>
       </div>
-      implement back to top feature
-      <h2 className="text-2xl font-semibold text-left py-2">Lives in</h2>
-      <LocationMap />
+      <div className="px-20">
+        <h2 className="text-2xl font-semibold text-left py-2">Lives in</h2>
+        <LocationMap />
+      </div>
     </section>
   );
 };

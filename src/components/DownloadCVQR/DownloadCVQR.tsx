@@ -16,7 +16,7 @@ const DownloadCVQR = () => {
         level="Q"
       />
       <p
-        className={`mx-16 font-press-start-2p text-sm text-center ${
+        className={`mx-16 text-sm text-center ${
           theme === "dark" ? "text-[#fff2d8]" : "text-[#113946]"
         }`}
       >

@@ -9,7 +9,7 @@ export default {
         sacramento: ["Sacramento", "cursive"],
         satisfy: ["Satisfy", "cursive"],
         "dancing-script": ["Dancing Script", "cursive"],
-        "press-start-2p": ["Press Start 2P", "system-ui"],
+        "press-start-2p": ['"Press Start 2P"', "system-ui"],
       },
     },
   },
