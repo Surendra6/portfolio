@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { MdContentCopy } from "react-icons/md";
+import LocationMap from "../LocationMap/LocationMap";
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
@@ -56,7 +57,9 @@ const Contact: React.FC = () => {
           )}
         </span>
       </div>
-      Google map location - implement back to top feature
+      implement back to top feature
+      <h2 className="text-2xl font-semibold text-left py-2">Lives in</h2>
+      <LocationMap />
     </section>
   );
 };
