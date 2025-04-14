@@ -1,7 +1,13 @@
 import { useTheme } from "../../ThemeContext";
 import DownloadCVQR from "../DownloadCVQR/DownloadCVQR";
 
-const AboutMe: React.FC = () => {
+interface AboutMeProps {
+  profile: {
+    cv: string;
+  };
+}
+
+const AboutMe: React.FC<AboutMeProps> = ({ profile }) => {
   const { theme } = useTheme();
   return (
     <section
@@ -26,7 +32,7 @@ const AboutMe: React.FC = () => {
           design. I enjoy collaborating with cross-functional teams to bring
           innovative ideas to life.
         </p>
-        <DownloadCVQR />
+        <DownloadCVQR cv={profile.cv} />
       </div>
     </section>
   );

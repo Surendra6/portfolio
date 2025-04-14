@@ -24,7 +24,7 @@ function App() {
         ${theme === "dark" ? "bg-[#fff2d8]" : "bg-transparent"}
       `}
       ></div>
-      <AboutMe />
+      <AboutMe profile={data.profile} />
 
       <div
         className={`h-0.5 mx-24
@@ -43,7 +43,7 @@ function App() {
         ${theme === "dark" ? "bg-[#fff2d8]" : "bg-[#113946]"}
       `}
       ></div>
-      <Contact />
+      <Contact profile={data.profile} />
       <BackToTopButton />
 
       {/* {

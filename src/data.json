@@ -1,66 +1,17 @@
 {
   "profile": {
-    "name": "John Doe",
-    "title": "Senior Front-end Developer",
-    "image": "/profile.jpg",
-    "email": "john.doe@example.com",
-    "phone": "+1-555-123-4567",
-    "linkedin": "https://www.linkedin.com/in/johndoe",
-    "github": "https://github.com/johndoe"
+    "name": "Surendra Gullipalli",
+    "title": "Front-End Developer",
+    "image": "/profile-image.jpg",
+    "email": "surendra.gullipalli6@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/surendra-gullipalli",
+    "github": "https://github.com/Surendra6",
+    "cv": "/Surendra_Gullipalli_CV.pdf"
   },
   "skills": [],
-  "workExperience": [
-    {
-      "company": "Acme Corp",
-      "title": "Senior Front-end Engineer",
-      "startDate": "2020-05-01",
-      "endDate": null,
-      "description": "Led the development of a new e-commerce platform using React and Redux. Improved performance by 30% and implemented a new design system.",
-      "responsibilities": [
-        "Developed and maintained key features of the e-commerce platform.",
-        "Collaborated with designers to implement a new design system.",
-        "Mentored junior developers."
-      ]
-    },
-    {
-      "company": "Beta Solutions",
-      "title": "Front-end Developer",
-      "startDate": "2017-08-01",
-      "endDate": "2020-04-01",
-      "description": "Developed and maintained web applications using React and various state management libraries. Contributed to the development of internal tools.",
-      "responsibilities": [
-        "Built and maintained web applications.",
-        "Worked with backend developers to integrate APIs.",
-        "Improved application performance and user experience."
-      ]
-    }
-  ],
-  "companies": {
-    "Acme Corp": {
-      "name": "Acme Corporation",
-      "website": "https://www.acmecorp.com",
-      "industry": "Technology"
-    },
-     "Beta Solutions": {
-      "name": "Beta Solutions",
-      "website": "https://www.betasolutions.com",
-      "industry": "Technology"
-    }
-  },
-  "awards": [
-    {
-      "name": "Employee of the Month",
-      "organization": "Acme Corp",
-      "date": "2021-12-01",
-      "description": "Awarded for outstanding performance and contributions to the team."
-    },
-    {
-      "name": "Innovation Award",
-      "organization": "Beta Solutions",
-      "date": "2019-06-01",
-      "description": "Recognized for developing a new feature that significantly improved user engagement."
-    }
-  ],
+  "workExperience": [],
+  "companies": {},
+  "awards": [],
   "projects": [
     {
       "name": "Medicines Complete",
@@ -75,8 +26,8 @@
       "description": "Developed a central Dashboard Application leveraging ReactJS, Vite, and Tailwind CSS to showcase a diverse portfolio of projects. It aggregates applications like Multimedia, Blog Posts, Image Identification, and a CV Builder into one accessible hub. Each entry concisely details the project's unique features, tech stack, and provides direct links to both live demos and GitHub repositories for easy exploration.",
       "technologies": ["ReactJS", "JavaScript", "Vite", "HTML5", "CSS3", "Tailwind CSS"],
       "images": "/Dashboard-app-image.png",
-      "github": "https://github.com/johndoe/portfolio",
-      "live": "https://johndoe.com"
+      "github": "https://github.com/Surendra6/Dashboard",
+      "live": "https://surendra6.github.io/Dashboard/"
     },
     {
       "name": "Derivco Slot Games",

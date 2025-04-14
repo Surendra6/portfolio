@@ -1,8 +1,12 @@
-import { QRCodeSVG } from "qrcode.react"; // Or QRCodeCanvas
+import { QRCodeSVG } from "qrcode.react";
 import { useTheme } from "../../ThemeContext";
 
-const DownloadCVQR = () => {
-  const pdfUrl = `${window.location.origin}/Surendra_Gullipalli_CV.pdf`;
+interface DownloadCVQRProps {
+  cv: string;
+}
+
+const DownloadCVQR: React.FC<DownloadCVQRProps> = ({ cv }) => {
+  const pdfUrl = `${window.location.origin}/${cv}`;
   const { theme } = useTheme();
 
   return (

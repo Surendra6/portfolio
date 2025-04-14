@@ -6,6 +6,7 @@ interface BannerProps {
     image: string;
     name: string;
     title: string;
+    cv: string;
   };
 }
 
@@ -20,11 +21,12 @@ const Banner: React.FC<BannerProps> = ({ profile }) => {
       <div className="size-2/3">
         <h1 className="text-5xl">
           Hello, I'm <br />
-          Surendra Gullipalli
+          {profile.name}
         </h1>
 
         <h2 className="text-3xl mt-5">
-          <span className="">{`<`}</span>Front-End Developer <span>{`/>`}</span>
+          <span className="">{`<`}</span>
+          {profile.title} <span>{`/>`}</span>
         </h2>
 
         <h1 className="flex w-full mt-24 font-satisfy text-7xl">
@@ -38,7 +40,7 @@ const Banner: React.FC<BannerProps> = ({ profile }) => {
           className="w-72 h-72 rounded-full"
         />
         <a
-          href="/Surendra_Gullipalli_CV.pdf"
+          href={profile.cv}
           download
           className="py-1 px-4 mt-8 inline-flex gap-3 text-center bg-[#fff2d8] text-[#113946] hover:text-[#113946] drop-shadow-md hover:drop-shadow-xl font-semibold rounded"
         >

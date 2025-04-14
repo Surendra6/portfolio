@@ -6,9 +6,18 @@ import { IoMdMail } from "react-icons/io";
 import { MdContentCopy } from "react-icons/md";
 import LocationMap from "../LocationMap/LocationMap";
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  profile: {
+    linkedin: string;
+    github: string;
+    email: string;
+  };
+}
+
+const Contact: React.FC<ContactProps> = ({ profile }) => {
   const { theme } = useTheme();
   const [showEmail, setShowEmail] = useState(false);
+
   return (
     <section
       id="contact"
@@ -19,7 +28,7 @@ const Contact: React.FC = () => {
       <h2 className="text-3xl font-semibold">Contact Me</h2>
       <div className="flex justify-center items-center w-full gap-10 my-10">
         <a
-          href="https://github.com/Surendra6"
+          href={profile.github}
           target="_blank"
           className={`${
             theme === "dark"
@@ -31,7 +40,7 @@ const Contact: React.FC = () => {
           <FaGithub className="w-12 h-12" />
         </a>
         <a
-          href="https://www.linkedin.com/in/surendra-gullipalli"
+          href={profile.linkedin}
           target="_blank"
           className={`${
             theme === "dark"
@@ -49,7 +58,7 @@ const Contact: React.FC = () => {
           />
           {showEmail && (
             <span className="flex justify-center items-center gap-2 font-semibold text-lg absolute top-2 left-20">
-              <span>surendra.gullipalli6@gmail.com</span>
+              <span>{profile.email}</span>
               <button className="hover:bg-[#b7a8a8] size-10 rounded-full flex items-center justify-center">
                 <MdContentCopy className="w-6 h-6" />
               </button>
