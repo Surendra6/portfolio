@@ -38,7 +38,7 @@ const Banner: React.FC<BannerProps> = ({ profile }) => {
           className="w-72 h-72 rounded-full"
         />
         <a
-          href="/cv.pdf"
+          href="/Surendra_Gullipalli_CV.pdf"
           download
           className="py-1 px-4 mt-8 inline-flex gap-3 text-center bg-[#fff2d8] text-[#113946] hover:text-[#113946] drop-shadow-md hover:drop-shadow-xl font-semibold rounded"
         >
