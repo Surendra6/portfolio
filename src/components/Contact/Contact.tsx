@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { useTheme } from "../../ThemeContext";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { MdContentCopy } from "react-icons/md";
 import LocationMap from "../LocationMap/LocationMap";
 
 interface ContactProps {
@@ -16,7 +14,24 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ profile }) => {
   const { theme } = useTheme();
-  const [showEmail, setShowEmail] = useState(false);
+
+  // --- Configuration ---
+  const subject = "Contact via Portfolio";
+  const body =
+    "Hello Surendra,\n\nI saw your portfolio and wanted to reach out.\n\n";
+
+  // --- Construct the mailto link ---
+  // Encode subject and body to handle spaces and special characters safely
+  const encodedSubject = encodeURIComponent(subject);
+  const encodedBody = encodeURIComponent(body);
+
+  let mailtoLink = `mailto:${profile.email}`;
+  if (subject) {
+    mailtoLink += `?subject=${encodedSubject}`;
+    if (body) {
+      mailtoLink += `&body=${encodedBody}`;
+    }
+  }
 
   return (
     <section
@@ -51,20 +66,21 @@ const Contact: React.FC<ContactProps> = ({ profile }) => {
         >
           <FaLinkedin className="w-12 h-12" />
         </a>
-        <span className="relative">
-          <IoMdMail
-            className="w-14 h-14 cursor-pointer"
-            onClick={() => setShowEmail(!showEmail)}
-          />
-          {showEmail && (
-            <span className="flex justify-center items-center gap-2 font-semibold text-lg absolute top-2 left-20">
-              <span>{profile.email}</span>
-              <button className="hover:bg-[#b7a8a8] size-10 rounded-full flex items-center justify-center">
-                <MdContentCopy className="w-6 h-6" />
-              </button>
-            </span>
-          )}
-        </span>
+        <a
+          href={mailtoLink}
+          aria-label={`Send email to ${profile.email}`}
+          title={`Send email to ${profile.email}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${
+            theme === "dark"
+              ? "text-[#fff2d8] hover:text-[#fff2d8]"
+              : "text-[#113946] hover:text-[#113946]"
+          }
+        `}
+        >
+          <IoMdMail className="w-14 h-14 cursor-pointer" />
+        </a>
       </div>
       <div className="px-20">
         <h2 className="text-2xl font-semibold text-left py-2">Lives in</h2>
