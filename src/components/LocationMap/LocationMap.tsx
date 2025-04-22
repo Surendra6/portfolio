@@ -106,7 +106,7 @@ const LocationMap: React.FC = () => {
         center={position} // Now accepts LatLngTuple correctly
         zoom={13}
         scrollWheelZoom={true}
-        style={{ height: "100%", width: "100%" }} // Style for map container itself
+        style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
           attribution={currentLayer.attribution}
@@ -115,8 +115,6 @@ const LocationMap: React.FC = () => {
           // react-leaflet's <TileLayer> doesn't have a separate accessToken prop.
         />
         <Marker position={position}>
-          {" "}
-          {/* Now accepts LatLngTuple correctly */}
           <Popup>Ipswich, UK.</Popup>
         </Marker>
       </MapContainer>

@@ -21,47 +21,51 @@ interface SkillsProps {
 
 const skills: SkillsProps["skills"] = [
   {
-    icon: <FaReact className="w-24 h-24" />,
+    icon: <FaReact className="w-24 h-24 hover:animate-spin" />,
     label: "ReactJS",
   },
   {
-    icon: <RiJavascriptLine className="w-24 h-24" />,
+    icon: (
+      <RiJavascriptLine className="w-24 h-24 hover:animate-gentle-wiggle" />
+    ),
     label: "JavaScript",
   },
   {
-    icon: <TbBrandTypescript className="w-24 h-24" />,
+    icon: (
+      <TbBrandTypescript className="w-24 h-24 hover:animate-gentle-wiggle" />
+    ),
     label: "TypeScript",
   },
   {
-    icon: <FaHtml5 className="w-24 h-24" />,
+    icon: <FaHtml5 className="w-24 h-24 hover:animate-gentle-wiggle" />,
     label: "HTML5",
   },
   {
-    icon: <IoLogoCss3 className="w-24 h-24" />,
+    icon: <IoLogoCss3 className="w-24 h-24 hover:animate-gentle-wiggle" />,
     label: "CSS3",
   },
   {
-    icon: <FaVuejs className="w-24 h-24" />,
+    icon: <FaVuejs className="w-24 h-24 hover:animate-shake" />,
     label: "Vue.js",
   },
   {
-    icon: <RiTailwindCssFill className="w-24 h-24" />,
+    icon: <RiTailwindCssFill className="w-24 h-24 hover:animate-pulse" />,
     label: "Tailwind CSS",
   },
   {
-    icon: <SiJest className="w-24 h-24" />,
+    icon: <SiJest className="w-24 h-24 hover:animate-gentle-wiggle" />,
     label: "Jest",
   },
   {
-    icon: <TbBrandCypress className="w-24 h-24" />,
+    icon: <TbBrandCypress className="w-24 h-24 hover:animate-gentle-wiggle" />,
     label: "Cypress",
   },
   {
-    icon: <FaGithub className="w-24 h-24" />,
+    icon: <FaGithub className="w-24 h-24 hover:animate-wave" />,
     label: "GitHub",
   },
   {
-    icon: <SiVite className="w-24 h-24" />,
+    icon: <SiVite className="w-24 h-24 hover:animate-shake" />,
     label: "Vite",
   },
 ];

@@ -21,7 +21,10 @@ const Banner: React.FC<BannerProps> = ({ profile }) => {
       <div className="size-2/3">
         <h1 className="text-5xl">
           Hello, I'm <br />
-          {profile.name}
+          {profile.name}{" "}
+          <span className="relative -top-2 inline-block origin-bottom-right animate-wave">
+            👋🏼
+          </span>
         </h1>
 
         <h2 className="text-3xl mt-5">
@@ -44,7 +47,8 @@ const Banner: React.FC<BannerProps> = ({ profile }) => {
           download
           className="py-1 px-4 mt-8 inline-flex gap-3 text-center bg-[#fff2d8] text-[#113946] hover:text-[#113946] drop-shadow-md hover:drop-shadow-xl font-semibold rounded"
         >
-          <FiDownload className="w-5 h-5" /> <span>Download CV</span>
+          <FiDownload className="w-5 h-5" />
+          <span>Download CV</span>
         </a>
       </div>
     </section>

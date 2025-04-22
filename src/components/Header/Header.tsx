@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`text-center text-[#fff2d8] fixed w-full border-b-2 border-b-[#6b7164] z-10 ${
+      className={`text-center text-[#fff2d8] fixed w-full border-b-2 border-b-[#6b7164] z-[1001] ${
         theme === "dark" ? "bg-black" : "bg-[#113946]"
       }`}
     >
